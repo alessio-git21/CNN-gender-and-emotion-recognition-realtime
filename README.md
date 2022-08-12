@@ -2,6 +2,10 @@
 The purpose of this project is to train Convolutional Neural Networks (CNNs) to 
 recognize the gender and the emotion of a person from his face. The trained CNNs are used for real-time recognition using computer's webcam.
 
+
+https://user-images.githubusercontent.com/100300894/184353856-1b598501-12f4-47a4-b5de-dfc459564d79.mp4
+
+
 ## A brief description of the project
 Two CNNs are trained: one CNN for gender recognition ([dataset for gender recognition](https://www.kaggle.com/datasets/maciejgronczynski/biggest-genderface-recognition-dataset)) 
 and the other one for emotion recognition ([dataset for emotion recognition](https://www.kaggle.com/datasets/ananthu017/emotion-detection-fer)). 
