@@ -6,10 +6,12 @@ recognize the gender and the emotion of a person from his face. The trained CNNs
 https://user-images.githubusercontent.com/100300894/184353856-1b598501-12f4-47a4-b5de-dfc459564d79.mp4
 
 
-## A brief description of the project
+## A brief description
 Two CNNs are trained: one CNN for gender recognition ([dataset for gender recognition](https://www.kaggle.com/datasets/maciejgronczynski/biggest-genderface-recognition-dataset)) 
 and the other one for emotion recognition ([dataset for emotion recognition](https://www.kaggle.com/datasets/ananthu017/emotion-detection-fer)). 
 The datasets are downloaded using the kaggle API.
+
+The CNN for gender recognition is based on the pre-trained VGG16 model.
 
 Recognizable emotions are: angry,happy,neutral,sad and surprised. The emotion dataset also contain images for "disgusted" and "feaful", we have decided not to consider these two
 emotions to make the task easier for the CNN (looking at some other notebooks it is clear that these two emotions are difficult to recognize).
@@ -29,17 +31,14 @@ detection algorithm. This algorithm returns, frame by frame, the portion of fram
 * opencv
 
 ## Files description
-* *gender_recognition* - a IPYNB file where the CNN for gender recognition is trained
-* *gender_vgg16model.h5* - the resulting CNN from *gender_recognition* (accuracy: 93%)
-* *emotion_recognition* - a IPYNB file where the CNN for emotion recognition is trained
-* *my_emotion_model.h5* - the resulting CNN from *emotion_recognition* (accuracy: 61%)
-* *real_time-g&e_recognition* - in this .py file *gender_vgg16model.h5* and *my_emotion_model.h5* are used for real-time recognition using webcam.
+* *gender_recognition* - a IPYNB file where the CNN for gender recognition is trained (actual accuracy: 95%)
+* *emotion_recognition* - a IPYNB file where the CNN for emotion recognition is trained (actual accuracy: 61%)
+* *real_time-g&e_recognition* - in this .py file the CNNs are used for real-time recognition using webcam.
 
 ## How to run
 Download the haar cascade classifier from the link above. You will have to import this algorithm in *real_time-g&e_recognition*.
 
-You can directly download the two CNNs (*gender_vgg16model.h5* and *my_emotion_model.h5*), import them into the *real_time-g&e_recognition* and run it for real time recognition.
-Alternatively you can train your CNNs using *gender_recognition* and *emotion_recognition* files and use them in *real_time-g&e_recognition*.
+Train your own CNNs using *gender_recognition* and *emotion_recognition* files and save the resulting models in .h5 format. Load the models in *real_time-g&e_recognition* file and run it. During training you are encouraged to modify data preprocessing (for instance you can use data augumentation) and the models parameters to improve the performance.
 
 ## License
 [GNU GPLv2](https://choosealicense.com/licenses/gpl-2.0/)
