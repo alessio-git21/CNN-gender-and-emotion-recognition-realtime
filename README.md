@@ -38,7 +38,12 @@ detection algorithm. This algorithm returns, frame by frame, the portion of fram
 ## How to run
 Download the haar cascade classifier from the link above. You will have to import this algorithm in *real_time-g&e_recognition*.
 
-Train your own CNNs using *gender_recognition* and *emotion_recognition* files and save the resulting models in .h5 format. Load the models in *real_time-g&e_recognition* file and run it. During training you are encouraged to modify data preprocessing (for instance you can use data augumentation) and the models parameters to improve the performance.
+Train your own CNNs using *gender_recognition* and *emotion_recognition* files and save the resulting models in .h5 format. Load the models in *real_time-g&e_recognition* file and run it. Once you have launched this file:
+* press G for gender recognition
+* press E for emotion recognition
+* press Q to quit.
+
+During training you are encouraged to modify data preprocessing (for instance you can use data augumentation) and the models parameters to improve the performance.
 
 ## License
 [GNU GPLv2](https://choosealicense.com/licenses/gpl-2.0/)
